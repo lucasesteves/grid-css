@@ -1,0 +1,155 @@
+html,body {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 250px) repeat(2, 200px) repeat(1, 200px) 250px;
+    grid-template-areas: 
+    "c01 c01 c02 c02 c03 c03 c04 c04"
+    "c01 c01 c02 c02 c03 c03 c05 c05"
+
+    "c07 c07 c08 c08 c12 c12 c05 c05"
+    "c07 c07 c08 c08 c13 c13 c14 c14"
+    
+    "c09 c09 c10 c10 c15 c15 c16 c16"
+
+    "c06 c06 c06 c06 c11 c11 c11 c11"
+    ;
+    row-gap:20px;
+    column-gap: 20px;
+    padding:20px;
+}
+
+
+.c01{
+    background: #7159c1;
+    grid-area: c01;
+}
+
+.c02{
+    background: #ccc;
+    grid-area: c02;
+}
+
+.c03{
+    background: #212121;
+    grid-area: c03;
+}
+
+.c04{
+    background: orange;
+    grid-area: c04;
+}
+
+.c05{
+    background: brown;
+    grid-area: c05;
+}
+
+.c06{
+    background: brown;
+    grid-area: c06;
+}
+
+.c07{
+    background: burlywood;
+    grid-area: c07;
+}
+
+.c08{
+    background: green;
+    grid-area: c08;
+}
+
+.c09{
+    background: red;
+    grid-area: c09;
+}
+
+.c10{
+    background: purple;
+    grid-area: c10;
+}
+
+.c11{
+    background: yellowgreen;
+    grid-area: c11;
+}
+
+.c12{
+    background: blueviolet;
+    grid-area: c12;
+}
+
+.c13{
+    background: #ccc;
+    grid-area: c13;
+}
+
+.c14{
+    background: #dedede;
+    grid-area: c14;
+}
+
+.c15{
+    background: grey;
+    grid-area: c15;
+}
+
+.c16{
+    background: black;
+    grid-area: c16;
+}
+
+@media only screen and (min-width: 1920px) {
+    .container {
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "c01 c01 c02 c02 c03 c03 c04 c04 c05 c05 c06 c06"
+        "c01 c01 c02 c02 c03 c03 c04 c04 c05 c05 c06 c06"
+        "c01 c01 c02 c02 c03 c03 c04 c04 c05 c05 c06 c06"
+        "c01 c01 c02 c02 c03 c03 c04 c04 c10 c10 c06 c06"
+        
+        "c01 c01 c02 c02 c03 c03 c09 c09 c10 c10 c06 c06"
+        "c01 c01 c02 c02 c03 c03 c09 c09 c10 c10 c06 c06"
+        "c07 c07 c08 c08 c03 c03 c09 c09 c15 c15 c11 c11"
+        "c07 c07 c08 c08 c03 c03 c09 c09 c15 c15 c11 c11"
+        
+        "c07 c07 c08 c08 c12 c12 c14 c14 c15 c15 c11 c11"
+        "c07 c07 c08 c08 c12 c12 c14 c14 c16 c16 c11 c11"
+        "c07 c07 c08 c08 c13 c13 c14 c14 c16 c16 c11 c11"
+        "c07 c07 c08 c08 c13 c13 c14 c14 c16 c16 c11 c11"
+        ;
+        height:calc(100vh - 40px);
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .container{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,300px) repeat(2,200px) repeat(9, 200px);
+        grid-template-areas: 
+        "c01 c01 c01 c01"
+        "c02 c02 c02 c02"
+        "c07 c07 c07 c07"
+        "c08 c08 c08 c08"
+        "c03 c03 c12 c12"
+        "c03 c03 c13 c13"
+        "c04 c04 c04 c04"
+        "c05 c05 c05 c05"
+        "c14 c14 c14 c14"
+        "c09 c09 c09 c09"
+        "c10 c10 c10 c10"
+        "c15 c15 c15 c15"
+        "c16 c16 c16 c16"
+        "c06 c06 c06 c06"
+        "c11 c11 c11 c11"
+        ;
+    }
+
+}
+
